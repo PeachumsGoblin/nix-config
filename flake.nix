@@ -25,7 +25,11 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.peachie = import ./home/peachie/home.nix;
-          }
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              self = inputs.self;
+            };
+          };
         ];
       };
     };
