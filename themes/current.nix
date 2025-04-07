@@ -1,1 +1,1 @@
-light.nix
+dark.nix
