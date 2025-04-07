@@ -7,6 +7,7 @@
     ./dotfiles.nix
     ./shell.nix
     ./services.nix
+    ./terminal.nix
   ];
 
   home.username = "peachie";
