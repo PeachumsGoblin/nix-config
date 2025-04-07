@@ -14,7 +14,8 @@
     in {
       nixosConfigurations.peach-koopy = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs;   theme = import ./themes/current.nix;
+};
         modules = [
           ./hosts/peach-koopy/configuration.nix
           home-manager.nixosModules.home-manager
