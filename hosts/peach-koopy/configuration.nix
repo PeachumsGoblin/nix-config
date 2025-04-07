@@ -8,6 +8,7 @@
     ../../modules/desktop/kde.nix
     ../../modules/system/users.nix
     ../../modules/system/fonts.nix
+    ../../modules/system/home-manager-cli.nix
     ../../modules/games/steam-and-launchers.nix
     ../../modules/games/bolt-launcher.nix
   ];
