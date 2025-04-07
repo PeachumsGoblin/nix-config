@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-THEMES_DIR="${SCRIPT_DIR}/../themes"
+cd "$HOME/nix-config/themes"
+ln -sf light.nix current.nix
 
-ln -sf "light.nix" "${THEMES_DIR}/current.nix"
-
-sudo nixos-rebuild switch --flake "${SCRIPT_DIR}/../.#peach-koopy"
-notify-send "Theme Changed" "Switched to Light Theme 🌞" --icon=weather-clear
+notify-send "Theme set to light ☀️" "Now run:\nsudo nixos-rebuild switch --flake ~/nix-config#peach-koopy" --icon=preferences-desktop-theme

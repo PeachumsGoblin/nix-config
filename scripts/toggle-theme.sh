@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$SCRIPT_DIR/../themes"
+cd "$HOME/nix-config/themes"
 
-current_link="$(readlink current.nix)"
+current_target=$(readlink current.nix)
 
-if [[ "$current_link" == *"light.nix" ]]; then
+if [[ "$current_target" == *"light.nix" ]]; then
   ln -sf dark.nix current.nix
-  theme_name="Dark"
+  theme_label="dark 🌙"
 else
   ln -sf light.nix current.nix
-  theme_name="Light"
+  theme_label="light ☀️"
 fi
 
-sudo nixos-rebuild switch --flake "$HOME/nix-config#peachie"
-notify-send "Theme Switched" "Now using $theme_name Theme" --icon=preferences-desktop-theme
+notify-send "Theme toggled" "Now using $theme_label\nRun:\nsudo nixos-rebuild switch --flake ~/nix-config#peach-koopy" --icon=preferences-desktop-theme
