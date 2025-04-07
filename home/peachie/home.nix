@@ -1,23 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "peachie";
-  home.homeDirectory = "/home/peachie";
-
-  home.packages = with pkgs; [
-    neofetch
-    starship
-    fastfetch
+  imports = [
+    ./theme.nix
+    ./programs.nix
+    ./dotfiles.nix
+    ./shell.nix
   ];
 
-  programs.starship.enable = true;
-
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    oh-my-zsh.enable = true;
-  };
-
+  home.username = "peachie";
+  home.homeDirectory = "/home/peachie";
   home.stateVersion = "23.11";
 }
