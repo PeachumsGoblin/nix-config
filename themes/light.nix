@@ -1,3 +1,3 @@
-import ./catppuccin-latte.nix
+# import ./catppuccin-latte.nix
 # Or:
-# import ./rose-pine-dawn.nix
+ import ./rose-pine-dawn.nix
