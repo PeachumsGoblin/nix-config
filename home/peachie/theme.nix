@@ -1,5 +1,7 @@
-{ config, pkgs, theme, ... }:
+{ config, pkgs, lib, ... }:
 
-{
+let
+  theme = import (lib.cleanSource ../../themes/current.nix);
+in {
   config._module.args.theme = theme;
 }
