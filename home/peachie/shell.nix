@@ -5,7 +5,19 @@
     enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    oh-my-zsh.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "z" "history" ];
+      theme = "robbyrussell";
+    };
+    shellAliases = {
+      ll = "ls -la";
+      gs = "git status";
+    };
+    initExtra = ''
+      export EDITOR=nano
+      eval "$(zoxide init zsh)"
+    '';
   };
 
   programs.starship = {

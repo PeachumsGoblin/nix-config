@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  theme = import ../../themes/catppuccin-latte.nix;
+  theme = import ../../themes/current.nix;
 in {
   config._module.args.theme = theme;
 }
