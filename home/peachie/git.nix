@@ -1,9 +1,11 @@
 { config, pkgs, theme, ... }:
 
+# Git Config
+
 {
   programs.git = {
     enable = true;
     userName = "Peachie";
-    userEmail = "peachie@github.com";
+    userEmail = "peachumsgoblin@pm.me";
   };
 }

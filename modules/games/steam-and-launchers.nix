@@ -8,16 +8,15 @@
     dedicatedServer.openFirewall = true;
   };
 
-  services.pulseaudio.enable = false;
-  services.pulseaudio.support32Bit = true;
-
-
+  # Misc launchers/helpers
   environment.systemPackages = with pkgs; [
+    bolt-launcher
     lutris
     heroic
     itch
     gamemode
     mangohud
+    steamcmd
     wineWowPackages.stable
     winetricks
   ];

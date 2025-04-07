@@ -1,6 +1,0 @@
-[Unit]
-Description=Set light theme at dawn
-
-[Service]
-Type=oneshot
-ExecStart=%h/nix-config/scripts/set-light-theme.sh

@@ -1,6 +1,0 @@
-[Unit]
-Description=Set dark theme at dusk
-
-[Service]
-Type=oneshot
-ExecStart=%h/nix-config/scripts/set-dark-theme.sh

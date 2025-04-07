@@ -11,7 +11,6 @@
     ../../modules/system/home-manager-cli.nix
     ../../modules/system/packages.nix
     ../../modules/games/steam-and-launchers.nix
-    ../../modules/games/bolt-launcher.nix
   ];
 
   networking.hostName = "peach-koopy";
@@ -25,8 +24,17 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   environment.systemPackages = with pkgs; [
-    git curl vim neovim wget firefox
+    git
+    curl
+    vim
+    neovim
+    libnotify
+    wget
+    firefox
+    tree
   ];
+
+  programs.zsh.enable = true;
 
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;

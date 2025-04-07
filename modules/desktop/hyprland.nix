@@ -16,8 +16,8 @@
   environment.systemPackages = with pkgs; [
     hyprpaper
     waybar
-    kitty
     rofi-wayland
+    wofi
   ];
 
   security.pam.services.hyprlock = {};
