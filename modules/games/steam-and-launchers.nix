@@ -8,7 +8,7 @@
     dedicatedServer.openFirewall = true;
   };
 
-  services.pulseaudio.enable = true;
+  services.pulseaudio.enable = false;
   services.pulseaudio.support32Bit = true;
 
 
