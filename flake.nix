@@ -14,8 +14,10 @@
     in {
       nixosConfigurations.peach-koopy = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs;
-};
+        specialArgs = {
+          inherit inputs;
+          self = inputs.self;
+        };
         modules = [
           ./hosts/peach-koopy/configuration.nix
           home-manager.nixosModules.home-manager
