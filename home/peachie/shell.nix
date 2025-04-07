@@ -41,9 +41,10 @@
 
   home.file.".config/starship.toml".text =
     builtins.replaceStrings
-      [ "#BASE02" "#BASE08" "#BASE09" "#BASE0A" "#BASE0B" "#BASE0C" "#BASE0D" ]
-      [ theme.base02 theme.base08 theme.base09 theme.base0A theme.base0B theme.base0C theme.base0D ]
+      [ "#BASE02" "#BASE08" "#BASE09" "#BASE0A" "#BASE0B" "#BASE0C" "#BASE0D" "#BASE0E" "#BASE0F" ]
+      [ "#${theme.base02}" "#${theme.base08}" "#${theme.base09}" "#${theme.base0A}" "#${theme.base0B}" "#${theme.base0C}" "#${theme.base0D}" "#${theme.base0E}" "#${theme.base0F}" ]
       (builtins.readFile ./starship/starship.template.toml);
+
 
 
   programs.starship = {
