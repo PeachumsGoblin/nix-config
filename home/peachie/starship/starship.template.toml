@@ -24,13 +24,13 @@ $time\n  \
 palette = "base16"
 
 [palettes.base16]
-overlay = "#BASE01"
+overlay = "#BASE02"
 love = "#BASE08"
-gold = "#BASE0A"
-rose = "#BASE0E"
-pine = "#BASE0D"
+gold = "#BASE09"
+rose = "#BASE0A"
+pine = "#BASE0B"
 foam = "#BASE0C"
-iris = "#BASE0F"
+iris = "#BASE0D"
 
 [directory]
 format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
