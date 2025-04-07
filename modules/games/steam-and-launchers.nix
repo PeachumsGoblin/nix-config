@@ -8,8 +8,9 @@
     dedicatedServer.openFirewall = true;
   };
 
-  hardware.opengl.driSupport32Bit = true;
-  hardware.pulseaudio.support32Bit = true;
+  services.pulseaudio.enable = true;
+  services.pulseaudio.support32Bit = true;
+
 
   environment.systemPackages = with pkgs; [
     lutris
