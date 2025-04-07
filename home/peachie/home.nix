@@ -11,4 +11,7 @@
   home.username = "peachie";
   home.homeDirectory = "/home/peachie";
   home.stateVersion = "23.11";
+  home.activation.createGamesDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    mkdir -p ${config.home.homeDirectory}/Games
+  '';
 }
