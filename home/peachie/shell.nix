@@ -43,5 +43,5 @@
       format = "$directory$git_branch$character";
     };
   };
- }
+ };
 }
