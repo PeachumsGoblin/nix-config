@@ -45,6 +45,7 @@
       [ theme.base02 theme.base08 theme.base09 theme.base0A theme.base0B theme.base0C theme.base0D ]
       (builtins.readFile ./starship/starship.template.toml);
 
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
