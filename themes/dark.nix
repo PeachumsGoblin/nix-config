@@ -1,1 +1,1 @@
-/home/peachie/nix-config/themes/catppuccin/dark.nix
+/home/peachie/nix-config/themes/rose-pine/dark.nix

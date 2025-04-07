@@ -1,1 +1,1 @@
-./rose-pine/dark.nix
+light.nix

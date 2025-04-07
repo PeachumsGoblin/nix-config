@@ -8,13 +8,11 @@ if [ -z "$FAMILY" ]; then
   exit 1
 fi
 
-THEMES="$HOME/nix-config/themes"
+cd "$HOME/nix-config/themes"
 
-# Update family-level light/dark links
-ln -sf "$THEMES/$FAMILY/light.nix" "$THEMES/light.nix"
-ln -sf "$THEMES/$FAMILY/dark.nix" "$THEMES/dark.nix"
-
-# Optional: reset current to light after switching families
-ln -sf "$THEMES/light.nix" "$THEMES/current.nix"
+# Symlink relatively!
+ln -sf "./$FAMILY/light.nix" light.nix
+ln -sf "./$FAMILY/dark.nix" dark.nix
+ln -sf light.nix current.nix
 
 notify-send "Switched Theme Family" "Now using $FAMILY"
