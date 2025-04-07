@@ -1,0 +1,1 @@
+/home/peachie/nix-config/themes/catppuccin/dark.nix
