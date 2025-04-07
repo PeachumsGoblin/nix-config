@@ -29,7 +29,7 @@
               inherit inputs;
               self = inputs.self;
             };
-          };
+          }
         ];
       };
     };
