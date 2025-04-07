@@ -1,27 +1,20 @@
 #!/usr/bin/env bash
-
 set -e
 
-THEMES_DIR="$HOME/nix-config/themes"
-FAMILY="$1"  # "catppuccin" or "rose-pine"
-MODE="$2"    # "light" or "dark"
+FAMILY="$1"
 
-if [ -z "$FAMILY" ] || [ -z "$MODE" ]; then
-  echo "Usage: $0 <theme-family> <light|dark>"
+if [ -z "$FAMILY" ]; then
+  echo "Usage: $0 <theme-family>"
   exit 1
 fi
 
-TARGET="$THEMES_DIR/$FAMILY/$MODE.nix"
+THEMES="$HOME/nix-config/themes"
 
-if [ ! -f "$TARGET" ]; then
-  echo "Theme not found: $TARGET"
-  exit 1
-fi
+# Update family-level light/dark links
+ln -sf "$THEMES/$FAMILY/light.nix" "$THEMES/light.nix"
+ln -sf "$THEMES/$FAMILY/dark.nix" "$THEMES/dark.nix"
 
-ln -sf "$TARGET" "$THEMES_DIR/current.nix"
+# Optional: reset current to light after switching families
+ln -sf "$THEMES/light.nix" "$THEMES/current.nix"
 
-plasma-apply-colorscheme "$FAMILY $MODE"
-
-
-sudo nixos-rebuild switch --flake "$HOME/nix-config#peachie"
-notify-send "Theme Switched" "$FAMILY $MODE theme applied" --icon=preferences-desktop-theme
+notify-send "Switched Theme Family" "Now using $FAMILY"
