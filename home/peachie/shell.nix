@@ -13,8 +13,8 @@
     shellAliases = {
       ll = "ls -la";
       gs = "git status";
-      toggle-theme = "~/nix-config/scripts/toggle-theme.sh";
-      theme = "~/nix-config/scripts/switch-theme.sh";
+      toggle-theme = "$HOME/nix-config/scripts/toggle-theme.sh";
+      theme = "$HOME/nix-config/scripts/switch-theme.sh";
     };
 #    initExtra = ''
 #      export EDITOR=nano
