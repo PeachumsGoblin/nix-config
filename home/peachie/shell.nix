@@ -15,6 +15,8 @@
       gs = "git status";
       toggle-theme = "$HOME/nix-config/scripts/toggle-theme.sh";
       theme = "$HOME/nix-config/scripts/switch-theme.sh";
+      dark-theme = "$HOME/nix-config/scripts/set-dark-theme.sh";
+      light-theme = "$HOME/nix-config/scripts/set-light-theme.sh";
     };
 #    initExtra = ''
 #      export EDITOR=nano
