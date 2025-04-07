@@ -14,10 +14,10 @@
       ll = "ls -la";
       gs = "git status";
     };
-    initExtra = ''
-      export EDITOR=nano
-      eval "$(zoxide init zsh)"
-    '';
+#    initExtra = ''
+#      export EDITOR=nano
+#      eval "$(zoxide init zsh)"
+#    '';
   };
 
   programs.starship = {
