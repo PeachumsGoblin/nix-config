@@ -28,8 +28,10 @@
     theme = "$HOME/nix-config/scripts/switch-theme.sh";
     dark-theme = "$HOME/nix-config/scripts/set-dark-theme.sh";
     light-theme = "$HOME/nix-config/scripts/set-light-theme.sh";
-    theme-cat = "$HOME/nix-config/scripts/switch-theme-family.sh catppuccin";
-    theme-rose = "$HOME/nix-config/scripts/switch-theme-family.sh rose-pine";
+    theme-cat-light = "$HOME/nix-config/scripts/switch-theme-family.sh catppuccin light";
+    theme-rose-light = "$HOME/nix-config/scripts/switch-theme-family.sh rose-pine light";
+    theme-cat-dark = "$HOME/nix-config/scripts/switch-theme-family.sh catppuccin dark";
+    theme-rose-dark = "$HOME/nix-config/scripts/switch-theme-family.sh rose-pine dark";
   };
 
     initExtra = ''
