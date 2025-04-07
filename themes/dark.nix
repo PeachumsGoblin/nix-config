@@ -1,1 +1,1 @@
-/home/peachie/nix-config/themes/rose-pine/dark.nix
+./rose-pine/dark.nix

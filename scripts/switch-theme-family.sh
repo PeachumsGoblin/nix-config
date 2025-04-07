@@ -10,9 +10,8 @@ fi
 
 cd "$HOME/nix-config/themes"
 
-# Symlink relatively!
 ln -sf "./$FAMILY/light.nix" light.nix
 ln -sf "./$FAMILY/dark.nix" dark.nix
 ln -sf light.nix current.nix
 
-notify-send "Switched Theme Family" "Now using $FAMILY"
+notify-send "Switched Theme Family" "Now using $FAMILY" --icon=preferences-desktop-theme
