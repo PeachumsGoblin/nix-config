@@ -4,9 +4,9 @@
 
 {
   imports = [
-    ./example.nix
-    ./example2.nix
-    ./example3.nix
+    ./git.nix
+    ./shell.nix
+    ./terminal.nix
   ];
 
   home.username = "peachie";

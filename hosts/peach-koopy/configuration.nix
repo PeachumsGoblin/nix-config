@@ -3,14 +3,14 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/desktop/nvidia.nix
     ../../modules/desktop/hyprland.nix
     ../../modules/desktop/kde.nix
-    ../../modules/system/users.nix
-    ../../modules/system/fonts.nix
-    ../../modules/system/home-manager-cli.nix
-    ../../modules/system/packages.nix
     ../../modules/games/steam-and-launchers.nix
+    ../../modules/system/audio.nix
+    ../../modules/system/fonts.nix
+    ../../modules/system/networking.nix
+    ../../modules/system/nvidia.nix
+    ../../modules/system/users.nix
   ];
 
   networking.hostName = "peach-koopy";
