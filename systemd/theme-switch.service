@@ -1,0 +1,6 @@
+[Unit]
+Description=Toggle light/dark theme
+
+[Service]
+Type=oneshot
+ExecStart=%h/nix-config/scripts/toggle-theme.sh

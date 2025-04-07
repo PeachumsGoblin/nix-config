@@ -16,7 +16,7 @@ case "$1" in
     esac
     echo "Switching to theme: $1"
     ln -sf "$THEMES_DIR/$THEME_FILE" "$TARGET"
-    home-manager switch --flake ~/nix-config#peach-koopy
+    nixos-rebuild switch --flake ~/nix-config#peach-koopy
     notify-send "Theme Changed" "Now using theme: $1" --icon=palette
     ;;
   *)

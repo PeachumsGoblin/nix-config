@@ -6,6 +6,7 @@
     ./programs.nix
     ./dotfiles.nix
     ./shell.nix
+    ./services.nix
   ];
 
   home.username = "peachie";
