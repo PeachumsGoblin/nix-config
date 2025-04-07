@@ -15,7 +15,7 @@
       _ = "sudo";
       clr = "clear";
       ll = "ls -la";
-      snrs = ''sudo nixos-rebuild switch --flake "$HOME/nix-config#peach-koopy"'';
+      snrs = ''sudo nixos-rebuild switch --flake "\$HOME/nix-config#peach-koopy"'';
       # Git
       ga = "git add";
       gaa = "git add all";
