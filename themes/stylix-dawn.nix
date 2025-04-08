@@ -34,8 +34,10 @@
     };
 
     iconTheme = {
+      enable = true;
       package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine-dawn";
+      dark = "rose-pine-moon";
+      light = "rose-pine-dawn";
     };
 
     cursor = {
