@@ -9,8 +9,8 @@
     # MONITORS
 
       monitor = [
-        "DP-2, 2560x1440@144.00, 0x0, auto, transform, 1"
-        "DP-3, 2560x1440@164.96, 1440x1120, auto"
+        "DP-2, 2560x1440@144.00, 0x0, 1, transform, 1"
+        "DP-3, 2560x1440@164.96, 1440x1120, 1"
       ];
 
     # ENVIRONMENT
