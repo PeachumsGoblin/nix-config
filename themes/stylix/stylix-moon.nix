@@ -1,11 +1,11 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, stylix, ... }:
 
 {
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ./base16/rose-pine-moon.yaml;
-    image = ../assets/wallpapers/leafy-moon.png;
+    base16Scheme = ../../themes/base16/rose-pine-moon.yaml;
+    image = ../../assets/wallpapers/leafy-moon.png;
     
     fonts = {
       serif = {
@@ -31,11 +31,6 @@
 
     opacity = {
       terminal = 0.9;
-    };
-
-    iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "rose-pine-moon";
     };
 
     cursor = {

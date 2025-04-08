@@ -4,8 +4,8 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ./base16/rose-pine-moon.yaml;
-    image = ../assets/wallpapers/leafy-moon.png;
+    base16Scheme = ../../themes/base16/rose-pine-dawn.yaml;
+    image = ../../assets/wallpapers/leafy-dawn.png;
     
     fonts = {
       serif = {
@@ -33,16 +33,9 @@
       terminal = 0.9;
     };
 
-    iconTheme = {
-      enable = true;
-      package = pkgs.rose-pine-icon-theme;
-      dark = "rose-pine-moon";
-      light = "rose-pine-dawn";
-    };
-
     cursor = {
       package = pkgs.rose-pine-cursor;
-      name = "BreezeX-RosePine-Linux";
+      name = "BreezeX-RosePineDawn-Linux";
       size = 36;
     };
 
