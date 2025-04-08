@@ -20,7 +20,7 @@
         };
         modules = [
           ./hosts/peach-koopy/configuration.nix
-          stylix.nixosModules.stylix
+          inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
