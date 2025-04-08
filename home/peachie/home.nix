@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, stylix, ... }:
 
 # Home Manager Core Configuration
 
@@ -25,4 +25,6 @@
   home.activation.createGamesDir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p ${config.home.homeDirectory}/Games
   '';
+
+  stylix.targets.kde.enable = false;
 }
