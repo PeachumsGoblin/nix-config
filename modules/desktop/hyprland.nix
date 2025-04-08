@@ -17,6 +17,7 @@
     hyprpaper
     waybar
     rofi-wayland
+    dunst
     wofi
   ];
 

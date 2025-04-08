@@ -10,7 +10,7 @@
   ];
 
   home.username = "peachie";
-  home.homeDirectory = "/home/peachie";
+  home.homeDirectory = lib.mkDefault (builtins.getEnv "HOME");
   home.stateVersion = "23.11";
 
   # Make a Games directory
