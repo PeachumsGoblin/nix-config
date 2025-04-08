@@ -26,7 +26,11 @@
             home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.peachie = import ./home/peachie/home.nix;
+            home-manager.users.peachie = {
+		import ./home/peachie/home.nix;
+		stylix.targets.kde.enable = false;
+            };
+
             home-manager.extraSpecialArgs = {
               inherit inputs;
               self = inputs.self;
