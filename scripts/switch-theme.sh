@@ -2,8 +2,8 @@
 
 set -e
 
-THEMES="$HOME/nix-config/themes"
-CURRENT="$THEMES/current.yaml"
+THEMES="$HOME/nix-config/themes/base16"
+CURRENT="$HOME/nix-config/themes/current.yaml"
 
 usage() {
   echo "Usage: $0 [latte|macchiato|dawn|moon]"
@@ -17,9 +17,6 @@ fi
 THEME="$1"
 
 case "$THEME" in
-  latte|macchiato)
-    ln -sf "catppuccin-$THEME.yaml" "$CURRENT"
-    ;;
   dawn|moon)
     ln -sf "rose-pine-$THEME.yaml" "$CURRENT"
     ;;

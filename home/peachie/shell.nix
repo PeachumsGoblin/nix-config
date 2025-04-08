@@ -14,13 +14,18 @@
     };
 
     shellAliases = {
+
+    ## Basics
+
       ll = "ls -la";
       _ = "sudo";
       clr = "clear";
       sudo-subl = "sudo -E subl";
       cdnc = "cd $HOME/nix-config";
       snrs = "sudo nixos-rebuild switch --flake $HOME/nix-config#peach-koopy";
-    # Git
+
+    ## Git
+
       ga = "git add";
       gaa = "git add all";
       gcam = "git commit --all --message";
@@ -28,11 +33,11 @@
       gp = "git push";
       gpm = "git push -u origin main";
       gs = "git status";
-    # Themes
-      theme-cat-light = "$HOME/nix-config/scripts/switch-theme.sh latte";
-      theme-cat-dark = "$HOME/nix-config/scripts/switch-theme.sh macchiato";
+
+    ## Themes
       theme-rose-light = "$HOME/nix-config/scripts/switch-theme.sh dawn";
       theme-rose-dark = "$HOME/nix-config/scripts/switch-theme.sh moon";
+  
     };
   };
 

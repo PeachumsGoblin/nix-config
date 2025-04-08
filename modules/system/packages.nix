@@ -32,8 +32,16 @@
     firefox
     libnotify
     nnn
+    nwg-look
     tree
     wget
     xfce.thunar
+
+    ## Theming
+    papirus-icon-theme
+    rose-pine-cursor
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
+    rose-pine-hyprcursor
   ];
 }

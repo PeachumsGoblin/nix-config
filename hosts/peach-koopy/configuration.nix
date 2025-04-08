@@ -10,8 +10,9 @@
     ../../modules/system/networking.nix
     ../../modules/system/nvidia.nix
     ../../modules/system/users.nix
-    ../../modules/system/stylix.nix
     ../../modules/system/packages.nix
+    ../../themes/stylix-dawn.nix
+    ../../themes/stylix-moon.nix
   ];
 
   networking.hostName = "peach-koopy";

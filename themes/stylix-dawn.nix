@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ../../themes/current.yaml;
+    base16Scheme = ./base16/rose-pine-dawn.yaml;
     
 
     fonts.monospace = {
