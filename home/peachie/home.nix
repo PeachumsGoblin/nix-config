@@ -7,6 +7,7 @@
     ./git.nix
     ./shell.nix
     ./terminal.nix
+    ./hyprland.nix
   ];
 
   home.username = "peachie";
