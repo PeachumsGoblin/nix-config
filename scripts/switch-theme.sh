@@ -28,5 +28,4 @@ case "$THEME" in
     ;;
 esac
 
-notify-send "Stylix" "Switched theme to: $THEME"
 sudo nixos-rebuild switch --flake "$HOME/nix-config#peach-koopy"

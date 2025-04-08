@@ -30,6 +30,7 @@
             home-manager.extraSpecialArgs = {
               inherit inputs;
               self = inputs.self;
+	      allowFileClobbering = true;
             };
           }
         ];
