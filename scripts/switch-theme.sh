@@ -18,10 +18,10 @@ THEME="$1"
 
 case "$THEME" in
   latte|macchiato)
-    ln -sf "$THEMES/catppuccin-$THEME.yaml" "$CURRENT"
+    ln -sf "catppuccin-$THEME.yaml" "$CURRENT"
     ;;
   dawn|moon)
-    ln -sf "$THEMES/rose-pine-$THEME.yaml" "$CURRENT"
+    ln -sf "rose-pine-$THEME.yaml" "$CURRENT"
     ;;
   *)
     usage
