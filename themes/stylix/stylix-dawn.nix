@@ -45,12 +45,5 @@
       dark = "rose-pine";
       package = pkgs.papirus-icon-theme;
     };
-
-    sizes = {
-      applications = 12.0;
-      desktop = 12.0;
-      popups = 12.0;
-      terminal = 14.0;
-    };
   };
 }
