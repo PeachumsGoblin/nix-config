@@ -3,8 +3,8 @@
 {
   stylix = {
     enable = true;
+    autoEnable = true;
     base16Scheme = ../../themes/current.yaml;
-    targets.hyprland.enable = true;
 
     fonts.monospace = {
       package = pkgs.monaspace;
