@@ -45,10 +45,10 @@
     };
 
     sizes = {
-      applications = fontSize;
-      desktop = fontSize;
-      popups = fontSize;
-      terminal = fontSize;
+      applications = 12.0;
+      desktop = 12.0;
+      popups = 12.0;
+      terminal = 14.0;
     };
   };
 }
