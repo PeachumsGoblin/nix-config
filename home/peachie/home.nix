@@ -13,6 +13,9 @@
   home.homeDirectory = lib.mkDefault (builtins.getEnv "HOME");
   home.stateVersion = "23.11";
 
+  home.activation.preCleanup = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
+    rm -f ~/.gtkrc-2.0
+  '';
 
   home.activation.cleanupGtkrc = lib.hm.dag.entryAfter ["writeBoundary"] ''
     rm -f ~/.gtkrc-2.0
