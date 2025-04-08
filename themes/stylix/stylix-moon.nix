@@ -44,7 +44,7 @@
       enable = true;
       light = "rose-pine-dawn";
       dark = "rose-pine";
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.rose-pine-icon-theme;
     };
   };
 }
