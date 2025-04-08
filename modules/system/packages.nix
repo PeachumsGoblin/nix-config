@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+hyprc{ config, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -40,8 +40,6 @@
     ## Theming
     papirus-icon-theme
     rose-pine-cursor
-    rose-pine-gtk-theme
     rose-pine-icon-theme
-    rose-pine-hyprcursor
   ];
 }
