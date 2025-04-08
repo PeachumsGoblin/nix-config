@@ -23,6 +23,7 @@
           ./hosts/peach-koopy/configuration.nix
           home-manager.nixosModules.home-manager
           {
+            home-manager.backupFileExtension = "backup";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.peachie = import ./home/peachie/home.nix;
