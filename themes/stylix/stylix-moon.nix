@@ -6,6 +6,7 @@
     autoEnable = true;
     base16Scheme = ../../themes/base16/rose-pine-dawn.yaml;
     image = ../../assets/wallpapers/leafy-dawn.png;
+    polarity = "dark";
     
     fonts = {
       serif = {
