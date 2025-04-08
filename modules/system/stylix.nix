@@ -38,7 +38,7 @@
     targets = {
       gtk.enable = true;
  #    kde.enable = true;
-      hyprland.enable = true;
+ #    hyprland.enable = true;
       kitty.enable = true;
       starship.enable = true;
       fish.enable = false;
