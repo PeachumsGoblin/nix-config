@@ -39,6 +39,13 @@
       size = 36;
     };
 
+    iconTheme = {
+      enable = true;
+      light = "rose-pine-dawn";
+      dark = "rose-pine";
+      package = pkgs.papirus-icon-theme;
+    };
+
     sizes = {
       applications = 12.0;
       desktop = 12.0;

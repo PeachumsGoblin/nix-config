@@ -35,8 +35,8 @@
       gs = "git status";
 
     ## Themes
-      theme-rose-light = "$HOME/nix-config/scripts/switch-theme.sh dawn";
-      theme-rose-dark = "$HOME/nix-config/scripts/switch-theme.sh moon";
+      theme-rose-light = "$HOME/nix-config/scripts/switch-stylix-theme.sh stylix-dawn";
+      theme-rose-dark = "$HOME/nix-config/scripts/switch-stylix-theme.sh stylix-moon";
   
     };
   };

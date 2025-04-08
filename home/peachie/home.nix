@@ -8,6 +8,7 @@
     ./shell.nix
     ./terminal.nix
     ./hyprland.nix
+    ../../themes/stylix/stylix-current.nix
   ];
 
   home.username = "peachie";
@@ -30,9 +31,3 @@
   stylix.targets.kde.enable = false;
 }
 
-    iconTheme = {
-      enable = true;
-      package = pkgs.rose-pine-icon-theme;
-      dark = "rose-pine-moon";
-      light = "rose-pine-dawn";
-    };

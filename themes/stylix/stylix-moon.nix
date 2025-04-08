@@ -1,11 +1,11 @@
-{ config, pkgs, lib, stylix, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = ../../themes/base16/rose-pine-moon.yaml;
-    image = ../../assets/wallpapers/leafy-moon.png;
+    base16Scheme = ../../themes/base16/rose-pine-dawn.yaml;
+    image = ../../assets/wallpapers/leafy-dawn.png;
     
     fonts = {
       serif = {
@@ -35,8 +35,15 @@
 
     cursor = {
       package = pkgs.rose-pine-cursor;
-      name = "BreezeX-RosePine-Linux";
+      name = "BreezeX-RosePineDawn-Linux";
       size = 36;
+    };
+
+    iconTheme = {
+      enable = true;
+      light = "rose-pine-dawn";
+      dark = "rose-pine";
+      package = pkgs.papirus-icon-theme;
     };
 
     sizes = {
