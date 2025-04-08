@@ -3,7 +3,7 @@
 {
   stylix = {
     enable = true;
-    autoEnable = true;
+#    autoEnable = true;
     base16Scheme = ../../themes/current.yaml;
 
     fonts.monospace = {
