@@ -8,8 +8,6 @@
     targets.kitty.enable = true;
     targets.starship.enable = true;
     targets.zsh.enable = true;
-#    kde.enable = true;
-    gtk.enable = true;
 
     fonts.monospace = {
       package = pkgs.monaspace;
