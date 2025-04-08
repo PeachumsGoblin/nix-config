@@ -1,1 +1,1 @@
-./moon.nix
+./stylix-moon.nix
