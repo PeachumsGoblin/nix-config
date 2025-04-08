@@ -4,7 +4,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/desktop/hyprland.nix
-    ../../modules/desktop/kde.nix
     ../../modules/games/steam-and-launchers.nix
     ../../modules/system/audio.nix
     ../../modules/system/fonts.nix

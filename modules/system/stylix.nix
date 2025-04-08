@@ -10,6 +10,11 @@
     fonts.monospace = {
       package = pkgs.monaspace;
       name = "Monaspace Neon";
+
     };
+
+    opacity = {
+      terminal = 0.9;
     };
-  }
+  };
+}
