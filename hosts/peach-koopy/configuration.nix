@@ -11,6 +11,7 @@
     ../../modules/system/nvidia.nix
     ../../modules/system/users.nix
     ../../modules/system/stylix.nix
+    ../../modules/system/packages.nix
   ];
 
   networking.hostName = "peach-koopy";
@@ -22,17 +23,6 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  environment.systemPackages = with pkgs; [
-    git
-    curl
-    vim
-    neovim
-    libnotify
-    wget
-    firefox
-    tree
-  ];
 
   programs.zsh.enable = true;
 

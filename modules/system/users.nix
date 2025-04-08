@@ -7,9 +7,4 @@
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
   };
-
-  environment.systemPackages = with pkgs; [
-    kitty
-    sublime4
-  ];
 }

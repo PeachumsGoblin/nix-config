@@ -13,13 +13,5 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
-  environment.systemPackages = with pkgs; [
-    hyprpaper
-    waybar
-    rofi-wayland
-    dunst
-    wofi
-  ];
-
   security.pam.services.hyprlock = {};
 }
