@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     base16Scheme = ../../themes/current.yaml;
-    targets.zsh.enable = true;
+    targets.hyprland.enable = true;
 
     fonts.monospace = {
       package = pkgs.monaspace;
