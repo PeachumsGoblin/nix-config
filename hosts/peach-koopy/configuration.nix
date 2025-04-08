@@ -11,6 +11,7 @@
     ../../modules/system/networking.nix
     ../../modules/system/nvidia.nix
     ../../modules/system/users.nix
+    ../../modules/system/stylix.nix
   ];
 
   networking.hostName = "peach-koopy";
