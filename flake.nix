@@ -19,8 +19,8 @@
           self = inputs.self;
         };
         modules = [
-          ./hosts/peach-koopy/configuration.nix
           inputs.stylix.nixosModules.stylix
+          ./hosts/peach-koopy/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
