@@ -8,6 +8,7 @@
     rofi-wayland
     waybar
     wofi
+    pavucontrol
 
     ## Game Tools
     bolt-launcher

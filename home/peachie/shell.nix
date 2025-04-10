@@ -35,8 +35,6 @@
       gs = "git status";
 
     ## Themes
-      theme-light = "sudo ln -sf $HOME/nix-config/themes/stylix/stylix-dawn.nix $HOME/nix-config/themes/stylix/stylix-current.nix";
-      theme-dark = "sudo ln -sf $HOME/nix-config/themes/stylix/stylix-moon.nix $HOME/nix-config/themes/stylix/stylix-current.nix";
   
     };
   };

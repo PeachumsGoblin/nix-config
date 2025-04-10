@@ -9,9 +9,10 @@
     audio.enable = true;
     alsa.enable = true;
     pulse.enable = true;
+    wireplumber.enable = true;
 
     # Optional: enable JACK support (for pro audio)
-    jack.enable = false;
+    jack.enable = true;
   };
 
   # Ensure PulseAudio is disabled so PipeWire can take over
@@ -19,10 +20,5 @@
 
   # Optional: enable real-time permissions for audio group
   security.rtkit.enable = true;
-
-  # Optional: environment tweak to avoid stuttering
-  #  environment.variables = {
-  #    PIPEWIRE_LATENCY = "128/48000";
-  # };
 }
 

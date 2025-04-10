@@ -91,6 +91,7 @@
         "$mod, Q, killactive"
         "$mod, M, exit"
         "$mod, R, exec, wofi --show drun"
+        "$mod, W, exec, firefox"
         "$mod, V, togglefloating"
         "$mod, F, fullscreen"
         "$mod, left, movefocus, l"

@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+
+# -------------------------------
+# 💜 chattie-cli — Peachie's AI Toolkit!
+# A single CLI interface to interact with your project’s ChatGPT assistant
+# Supports:
+#   - printing prompt/memory
+#   - opening your GPT
+#   - syncing docs
+#   - showing docs
+# -------------------------------
+
+# 🗂️ Set path to where your markdown docs live in your project
+DOCS_DIR="$HOME/nix-config/docs"
+TARGET_DIR="$HOME/.config/nix-docs"
+
+# 🌈 Define color codes
+BOLD="\033[1m"
+RESET="\033[0m"
+GREEN="\033[0;32m"
+BLUE="\033[0;34m"
+PURPLE="\033[0;35m"
+YELLOW="\033[1;33m"
+
+# 💁 Helper: print usage info
+print_help() {
+  echo -e "${BOLD}💡 chattie-cli usage:${RESET}"
+  echo "  --summon,     -S     Print prompt.md and chattie-setup.md (for ChatGPT init)"
+  echo "  --launch,     -L     Open your custom GPT in the browser"
+  echo "  --show-docs,  -D     Show one of: all | prompt | setup | instructions"
+  echo "  --sync,       -s     Symlink docs into ~/.config/nix-docs/"
+  echo "  --docs-path,  -p     Print location of ~/.config/nix-docs"
+  echo "  --help,       -h     Show this help message"
+}
+
+# 🧠 Subcommand: Summon Chattie (print prompt + memory setup)
+summon() {
+  echo -e "${PURPLE}🔮 Summoning Chattie...${RESET}"
+  echo ""
+  echo -e "${YELLOW}📜 Prompt (paste into Custom Instructions):${RESET}"
+  cat "$TARGET_DIR/prompt.md"
+  echo ""
+  echo -e "${BLUE}🧠 Memory (paste into the chat window):${RESET}"
+  cat "$TARGET_DIR/chattie-setup.md"
+  echo ""
+  echo -e "${GREEN}💬 Starter message:${RESET}"
+  echo "Hi! You are Chattie, my NixOS assistant. Please use the following:"
+  echo "- Here is your behavior prompt: (see above)"
+  echo "- And here is what you should remember about me: (see above)"
+}
+
+# 🚀 Subcommand: Launch browser
+launch() {
+  GPT_URL="https://chat.openai.com/gpts"
+  echo -e "${PURPLE}🚀 Launching ChattieGPT in your default browser...${RESET}"
+  xdg-open "$GPT_URL" >/dev/null 2>&1 & disown
+}
+
+# 📖 Subcommand: Show docs
+show_docs() {
+  case "$1" in
+    all)
+      echo -e "${BLUE}📖 prompt.md:${RESET}"; cat "$TARGET_DIR/prompt.md"; echo ""
+      echo -e "${BLUE}📖 chattie-setup.md:${RESET}"; cat "$TARGET_DIR/chattie-setup.md"; echo ""
+      echo -e "${BLUE}📖 instructions.md:${RESET}"; cat "$TARGET_DIR/instructions.md"; echo ""
+      ;;
+    prompt)
+      cat "$TARGET_DIR/prompt.md"
+      ;;
+    setup)
+      cat "$TARGET_DIR/chattie-setup.md"
+      ;;
+    instructions)
+      cat "$TARGET_DIR/instructions.md"
+      ;;
+    *)
+      echo -e "${YELLOW}⚠️ Please specify: all | prompt | setup | instructions${RESET}"
+      ;;
+  esac
+}
+
+# 🔄 Subcommand: Sync docs to ~/.config/nix-docs
+sync_docs() {
+  mkdir -p "$TARGET_DIR"
+  ln -sf "$DOCS_DIR/prompt.md" "$TARGET_DIR/prompt.md"
+  ln -sf "$DOCS_DIR/chattie-setup.md" "$TARGET_DIR/chattie-setup.md"
+  ln -sf "$DOCS_DIR/instructions.md" "$TARGET_DIR/instructions.md"
+  echo -e "${GREEN}✅ Symlinks updated in $TARGET_DIR${RESET}"
+}
+
+# 📁 Subcommand: Print docs path
+docs_path() {
+  echo "$TARGET_DIR"
+}
+
+# 🧪 Parse flags
+case "$1" in
+  --summon|-S) summon ;;
+  --launch|-L) launch ;;
+  --show-docs|-D) show_docs "$2" ;;
+  --sync|-s) sync_docs ;;
+  --docs-path|-p) docs_path ;;
+  --help|-h|"") print_help ;;
+  *)
+    echo -e "${YELLOW}⚠️ Unknown command: $1${RESET}"
+    print_help
+    ;;
+esac
