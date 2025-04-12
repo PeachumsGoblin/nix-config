@@ -11,6 +11,10 @@
     ../../themes/stylix/stylix-current.nix
   ];
 
+  home.sessionPath = [
+  "$HOME/.local/bin"
+  ];
+
   home.username = "peachie";
   home.homeDirectory = lib.mkDefault (builtins.getEnv "HOME");
   home.stateVersion = "23.11";
