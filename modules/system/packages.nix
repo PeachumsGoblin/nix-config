@@ -44,6 +44,8 @@
     xfce.xfce4-terminal
     xfce.thunar-media-tags-plugin
     nemo-fileroller
+    xfce.xfce4-settings
+    xfce.xfce4-session
 
 
     ## Theming
