@@ -37,12 +37,13 @@
     tree
     wget
     xfce.thunar
-    thunar-volman
+    xfce.thunar-volman
     gvfs
-    thunar-archive-plugin
-    tumbler
-    xfce4-terminal
-    fileroller
+    xfce.thunar-archive-plugin
+    xfce.tumbler
+    xfce.xfce4-terminal
+    xfce.thunar-media-tags-plugin
+    nemo-fileroller
 
 
     ## Theming
