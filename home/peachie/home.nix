@@ -12,7 +12,7 @@
   ];
 
   home.sessionPath = [
-  "$HOME/.local/bin"
+  ".local/bin"
   ];
 
   home.username = "peachie";
