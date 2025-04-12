@@ -30,6 +30,8 @@
 
     ## General Utilities
     curl
+    unzip
+    steam-run
     firefox
     libnotify
     nnn
