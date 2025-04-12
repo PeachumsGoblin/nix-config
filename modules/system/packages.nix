@@ -37,6 +37,13 @@
     tree
     wget
     xfce.thunar
+    thunar-volman
+    gvfs
+    thunar-archive-plugin
+    tumbler
+    xfce4-terminal
+    fileroller
+
 
     ## Theming
     papirus-icon-theme
