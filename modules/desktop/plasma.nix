@@ -2,7 +2,7 @@
 
 {
   services.desktopManager.plasma6.enable = true;
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs.kdePackages; [
     plasma-desktop
     konsole
     dolphin
