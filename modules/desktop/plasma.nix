@@ -6,6 +6,5 @@
     plasma-desktop
     konsole
     dolphin
-    aseprite
   ];
 }
