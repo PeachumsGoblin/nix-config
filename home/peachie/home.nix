@@ -1,4 +1,4 @@
-{ config, lib, pkgs, stylix, ... }:
+{ config, lib, pkgs, ... }:
 
 # Home Manager Core Configuration
 
@@ -8,7 +8,6 @@
     ./shell.nix
     ./terminal.nix
     ./hyprland.nix
-    ../../themes/stylix/stylix-current.nix
   ];
 
   home.sessionPath = [
