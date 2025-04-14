@@ -2,8 +2,8 @@
 
 {
   stylix = {
-    enable = true;
-    autoEnable = true;
+    enable = false;
+    autoEnable = false;
     base16Scheme = ../../themes/base16/rose-pine-moon.yaml;
     image = ../../assets/wallpapers/leafy-moon.png;
     polarity = "dark";

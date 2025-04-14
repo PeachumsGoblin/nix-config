@@ -5,7 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    stylix.url = "github:danth/stylix";
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
@@ -20,7 +19,6 @@
         };
         
       modules = [
-        inputs.stylix.nixosModules.stylix
         ./hosts/peach-koopy/configuration.nix
         home-manager.nixosModules.home-manager
         {
