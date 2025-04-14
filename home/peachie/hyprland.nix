@@ -79,7 +79,7 @@
 
       misc = {
           force_default_wallpaper = 2;
-          disable_hyprland_logo = false;
+          disable_hyprland_logo = lib.mkForce false;
       };
 
     # BINDS
