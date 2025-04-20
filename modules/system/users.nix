@@ -7,6 +7,4 @@
     extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.zsh;
   };
-
-  users.groups.docker = {};
 }
