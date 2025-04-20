@@ -6,7 +6,7 @@ in {
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia-container-toolkit.enable = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   hardware.nvidia = {
     modesetting.enable = true;
