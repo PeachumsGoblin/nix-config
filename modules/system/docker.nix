@@ -2,6 +2,7 @@
 
 {
   virtualisation.docker.enable = true;
+  virtualisation.docker.enableNvidia = true;
   environment.systemPackages = with pkgs; [
     docker
   ];
