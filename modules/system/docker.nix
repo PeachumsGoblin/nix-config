@@ -5,5 +5,7 @@
   virtualisation.docker.enableNvidia = true;
   environment.systemPackages = with pkgs; [
     docker
+    nvidia-docker
+    nvidia-docker-toolkit
   ];
 }

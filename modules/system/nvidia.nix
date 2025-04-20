@@ -6,7 +6,6 @@ in {
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia-container-toolkit.enable = true;
-  hardware.nvidia-container.enable = true;
   hardware.opengl.enable = true;
 
   hardware.nvidia = {
