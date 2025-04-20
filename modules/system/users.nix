@@ -4,7 +4,9 @@
   users.users.peachie = {
     isNormalUser = true;
     description = "Peachie";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.zsh;
   };
+
+  users.groups.docker = {};
 }
