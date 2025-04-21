@@ -8,7 +8,7 @@
     "default-runtime" = "nvidia";
     "runtimes" = {
       "nvidia" = {
-        "path" = "/usr/bin/nvidia-container-runtime";
+        "path" = "/run/current-system/sw/bin/nvidia-container-runtime";
         "runtimeArgs" = [];
       };
     };
