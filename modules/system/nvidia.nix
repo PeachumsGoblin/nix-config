@@ -24,5 +24,6 @@ in {
 
   environment.systemPackages = with pkgs; [
     nvidiaPkg.settings
+    nvidia-container-runtime
   ];
 }
