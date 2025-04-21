@@ -5,7 +5,6 @@ let
 in {
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.nvidia-container-toolkit.enable = true;
   hardware.graphics.enable = true;
 
   hardware.nvidia = {
@@ -25,6 +24,7 @@ in {
   environment.systemPackages = with pkgs; [
     nvidiaPkg.settings
     nvidia-docker
+    nvidia-container-toolkit
   ];
   environment.etc."usr/bin/nvidia-ctk".source = "${pkgs.nvidia-container-toolkit}/bin/nvidia-ctk";
 }
