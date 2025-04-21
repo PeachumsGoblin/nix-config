@@ -26,4 +26,5 @@ in {
     nvidiaPkg.settings
     nvidia-docker
   ];
+  environment.etc."usr/bin/nvidia-ctk".source = "${pkgs.nvidia-container-toolkit}/bin/nvidia-ctk";
 }
