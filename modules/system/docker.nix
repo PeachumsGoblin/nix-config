@@ -6,4 +6,9 @@
     docker
     nvidia-docker
   ];
+
+    # Optional: explicitly allow NVIDIA runtime
+  virtualisation.docker.extraOptions = ''
+    --default-runtime=nvidia
+  '';
 }
