@@ -3,9 +3,7 @@
 {
   virtualisation.docker = {
     enable = true;
-    environment.systemPackages = with pkgs; [
-      docker
-    ];
+
     daemon.settings = {
     "default-runtime" = "nvidia";
     "runtimes" = {
@@ -20,4 +18,8 @@
   # virtualisation.docker.extraOptions = "--default-runtime=nvidia";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+      docker
+  ];
 }
