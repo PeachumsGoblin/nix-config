@@ -15,7 +15,6 @@ in {
     powerManagement.enable = false;
     open = false;
     nvidiaSettings = true;
-    package = nvidiaPkg;
   };
 
   services.xserver.screenSection = ''
