@@ -2,13 +2,12 @@
 
 {
   virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
     docker
-    nvidia-docker
   ];
 
-    # Optional: explicitly allow NVIDIA runtime
-  virtualisation.docker.extraOptions = ''
-    --default-runtime=nvidia
-  '';
+  # DO NOT set this unless you're sure the runtime exists
+  # Leave this out for now:
+  # virtualisation.docker.extraOptions = "--default-runtime=nvidia";
 }
