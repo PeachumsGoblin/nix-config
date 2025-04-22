@@ -60,5 +60,6 @@
     python311Packages.tkinter
     python311Packages.pip
     python311Packages.requests
+    python311Packages.python-dotenv
   ];
 }
