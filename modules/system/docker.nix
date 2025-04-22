@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  virtualisation.docker = {
+  services.docker = {
     enable = true;
     package        = pkgs.docker_25;
     nvidiaSupport  = true;
