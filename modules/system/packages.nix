@@ -59,5 +59,6 @@
     python311Packages.virtualenv
     python311Packages.tkinter
     python311Packages.pip
+    python311Packages.requests
   ];
 }
