@@ -25,6 +25,5 @@ in {
     nvidiaPkg.settings
     nvidia-docker
     nvidia-container-toolkit
-    nvidia-container-runtime
   ];
 }

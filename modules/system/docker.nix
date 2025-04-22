@@ -9,7 +9,7 @@
         "default-runtime": "nvidia",
         "runtimes": {
           "nvidia": {
-            "path": "${pkgs.nvidia-container-runtime}/bin/nvidia-container-runtime",
+            "path": "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime",
             "runtimeArgs": []
           }
         }
