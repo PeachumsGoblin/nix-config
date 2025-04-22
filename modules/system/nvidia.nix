@@ -23,7 +23,5 @@ in {
 
   environment.systemPackages = with pkgs; [
     nvidiaPkg.settings
-    nvidia-docker
-    nvidia-container-toolkit
   ];
 }
