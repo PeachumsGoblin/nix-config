@@ -3,7 +3,6 @@
 {
   virtualisation.docker = {
     enable = true;
-    extraOptions = "--default-runtime=nvidia";
     daemon.settings = {
       "default-runtime" = "nvidia";
       "features" = {
