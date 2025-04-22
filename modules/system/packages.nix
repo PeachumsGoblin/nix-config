@@ -54,5 +54,8 @@
     papirus-icon-theme
     rose-pine-cursor
     rose-pine-icon-theme
+
+    python311
+    python311Packages.virtualenv
   ];
 }
