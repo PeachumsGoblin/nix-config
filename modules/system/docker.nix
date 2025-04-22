@@ -17,11 +17,13 @@
 
   # DO NOT set this unless you're sure the runtime exists
   # Leave this out for now:
-  # virtualisation.docker.extraOptions = "--default-runtime=nvidia";
+  virtualisation.docker.extraOptions = "--default-runtime=nvidia";
     };
   };
 
   environment.systemPackages = with pkgs; [
-      docker
+    docker
+    nvidia-docker
+    nvidia-container-toolkit
   ];
 }
