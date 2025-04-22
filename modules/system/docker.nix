@@ -5,6 +5,9 @@
     enable = true;
     daemon.settings = {
     "default-runtime" = "nvidia";
+    "features" = {
+       "cdi" = true;
+    };
     "runtimes" = {
       "nvidia" = {
         "path" = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
