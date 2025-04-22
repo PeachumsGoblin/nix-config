@@ -3,21 +3,18 @@
 {
   virtualisation.docker = {
     enable = true;
+    extraOptions = "--default-runtime=nvidia";
     daemon.settings = {
-    "default-runtime" = "nvidia";
-    "features" = {
-       "cdi" = true;
-    };
-    "runtimes" = {
+      "default-runtime" = "nvidia";
+      "features" = {
+        "cdi" = true;
+      };
+      "runtimes" = {
       "nvidia" = {
         "path" = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
         "runtimeArgs" = [];
       };
-    };
-
-  # DO NOT set this unless you're sure the runtime exists
-  # Leave this out for now:
-  virtualisation.docker.extraOptions = "--default-runtime=nvidia";
+      };
     };
   };
 
