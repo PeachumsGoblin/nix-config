@@ -65,7 +65,6 @@
     jq
 
 
-    chatgpt
     chatgpt-cli
 
   ];
