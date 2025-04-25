@@ -11,7 +11,6 @@
     ../../modules/system/nvidia.nix
     ../../modules/system/users.nix
     ../../modules/system/packages.nix
-    ../../modules/desktop/plasma.nix
     ../../modules/system/docker.nix
   ];
 
