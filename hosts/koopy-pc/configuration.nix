@@ -10,7 +10,7 @@
     ../../modules/system/networking.nix
     ../../modules/system/nvidia.nix
     ../../modules/system/users.nix
-    ../../modules/system/packages.nix
+    ../../modules/system/packages/packages.nix
     ../../modules/system/docker.nix
   ];
 
