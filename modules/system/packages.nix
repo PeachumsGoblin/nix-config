@@ -63,5 +63,10 @@
     python311Packages.requests
     python311Packages.python-dotenv
     jq
+
+
+    chatgpt
+    chatgpt-cli
+
   ];
 }
