@@ -1,5 +1,5 @@
 {
-  description = "Peachie's NixOS flake for peach-koopy";
+  description = "Peachie’s NixOS flake for koopy-pc";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -11,7 +11,7 @@
     let
       system = "x86_64-linux";
     in {
-      nixosConfigurations.peach-koopy = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.koopy-pc = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit inputs;
@@ -19,7 +19,7 @@
         };
         
       modules = [
-        ./hosts/peach-koopy/configuration.nix
+        ./hosts/koopy-pc/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
