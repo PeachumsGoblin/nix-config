@@ -22,7 +22,7 @@
       clr = "clear";
       sudo-subl = "sudo -E subl";
       cdnc = "cd $HOME/nix-config";
-      snrs = "sudo nixos-rebuild switch --flake $HOME/nix-config#peach-koopy";
+      snrs = "sudo nixos-rebuild switch --flake $HOME/nix-config#koopy-pc";
 
     ## Git
 
