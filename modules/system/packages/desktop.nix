@@ -1,10 +1,10 @@
 # desktop.nix
 # For theming, fonts, and icons
 
+{ pkgs, ... }:
 
 with pkgs; [
 
-  	dolphin
   	xfce.thunar
     xfce.thunar-volman
     gvfs

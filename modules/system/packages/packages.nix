@@ -1,9 +1,9 @@
 { config, lib, pkgs, ... }:
 
  let
-   core    = import ./core.nix    { inherit pkgs; };
-   desktop = import ./desktop.nix { inherit pkgs; };
-   games   = import ./games.nix   { inherit pkgs; };
+   core    = pkgs.callPackage ./core.nix    {};
+   desktop = pkgs.callPackage ./desktop.nix {};
+   games   = pkgs.callPackage ./games.nix   {};
  in {
    environment.systemPackages = lib.concatLists [ core desktop games ];
 }
