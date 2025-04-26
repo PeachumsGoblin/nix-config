@@ -5,6 +5,7 @@
 
 {
   imports = [
+    stylix.homeManagerModules.stylix
     ./git.nix
     ./shell.nix
     ./terminal.nix
