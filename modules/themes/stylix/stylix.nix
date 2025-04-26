@@ -6,7 +6,7 @@
 
 {
   # Import your base16 + wallpaper settings
-  imports = [ ./stylix/stylix-current.nix ];
+  imports = [ ./stylix-current.nix ];
 
   # Allow auto-enable if you want Stylix to reapply on each activation
   stylix.autoEnable = true;
