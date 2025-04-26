@@ -6,6 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
@@ -20,10 +21,11 @@
         };
         
       modules = [
+        stylix.nixosModules.stylix
+        ./home/peachie/stylix.nix
         ./hosts/koopy-pc/configuration.nix
         home-manager.nixosModules.home-manager
         {
-          stylix.nixosModules.stylix = true;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "backup";

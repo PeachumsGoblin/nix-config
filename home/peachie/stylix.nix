@@ -2,7 +2,7 @@
 # Stylix color scheme & wallpaper module
 
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, stylix, ... }:
 
 {
   # Import your base16 + wallpaper settings
