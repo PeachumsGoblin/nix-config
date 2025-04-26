@@ -31,7 +31,7 @@
             allowFileClobbering = true;
           };
 
-          home-manager.users.peachie = import ../../home/peachie/home.nix;
+          home-manager.users.peachie = import ./home/peachie/home.nix;
         }
     ];
   };
