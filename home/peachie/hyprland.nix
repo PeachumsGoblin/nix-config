@@ -4,6 +4,13 @@
 { config, lib, pkgs, ... }:
 
 {
+
+  stylix.targets.iconTheme.enable = true;
+  stylix.targets.iconTheme.light  = "rose-pine-dawn";
+  stylix.targets.iconTheme.dark   = "rose-pine";
+  stylix.targets.iconTheme.package = pkgs.rose-pine-icon-theme;
+
+
   wayland.windowManager.hyprland = {
     enable = true;
 

@@ -35,9 +35,15 @@
             allowFileClobbering = true;
           };
 
-          home-manager.users.peachie = import ./home/peachie/home.nix;
+          home-manager.users.peachie = {
+            home.stateVersion = "23.11";
+            modules = [
+              stylix.homeManagerModules.stylix
+              ./home/peachie/home.nix
+            ];
+          };
         }
-      ];
-    };
+    ];
   };
+};
 }

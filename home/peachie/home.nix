@@ -9,6 +9,7 @@
     ./shell.nix
     ./terminal.nix
     ./hyprland.nix
+    ./stylix.nix
   ];
 
   stylix.enable     = true;

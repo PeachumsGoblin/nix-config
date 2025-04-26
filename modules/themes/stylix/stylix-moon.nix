@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, stylix, ... }:
 
 {
   stylix = {
@@ -38,13 +38,6 @@
       package = pkgs.rose-pine-cursor;
       name = "BreezeX-RosePine-Linux";
       size = 36;
-    };
-
-    iconTheme = {
-      enable = true;
-      light = "rose-pine-dawn";
-      dark = "rose-pine";
-      package = pkgs.rose-pine-icon-theme;
     };
   };
 }

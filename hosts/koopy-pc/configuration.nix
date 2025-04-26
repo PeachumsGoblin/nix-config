@@ -12,7 +12,6 @@
     ../../modules/system/users.nix
     ../../modules/system/packages/packages.nix
     ../../modules/system/docker.nix
-    ../../modules/themes/stylix/stylix.nix
   ];
 
   networking.hostName = "koopy-pc";
