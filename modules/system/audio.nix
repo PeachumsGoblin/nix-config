@@ -1,3 +1,6 @@
+# modules/system/audio.nix 
+# PipeWire + Jack sound stack
+
 { config, pkgs, lib, ... }:
 
 {
@@ -20,9 +23,5 @@
 
   # Optional: enable real-time permissions for audio group
   security.rtkit.enable = true;
-
-  environment.systemPackages = with pkgs; [
-  pulseaudio
-];
 }
 

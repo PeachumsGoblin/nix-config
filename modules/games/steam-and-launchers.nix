@@ -1,7 +1,8 @@
+# modules/games/steam-and-launchers.nix 
+# Steam and game launchers
+
 { config, pkgs, ... }:
 
-  # Enable Steam with native runtime and 32-bit support
-  
 {
   programs.steam = {
     enable = true;

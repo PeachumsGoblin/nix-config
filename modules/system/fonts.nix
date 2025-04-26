@@ -1,4 +1,7 @@
-{ config, pkgs, ... }:
+# modules/system/fonts.nix 
+# Global font packages
+
+{ config, pkgs, lib, ... }:
 
 {
   fonts.packages = with pkgs; [

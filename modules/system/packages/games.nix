@@ -1,3 +1,6 @@
+# modules/system/packages/games.nix
+# For video games
+
 { pkgs, ... }:
 
 with pkgs; [
@@ -7,8 +10,8 @@ with pkgs; [
     itch
     lutris
     mangohud
-    steamcmd
-    wineWowPackages.stable
-    winetricks
     steam-run
+    steamcmd
+    winetricks
+    wineWowPackages.stable
 ]

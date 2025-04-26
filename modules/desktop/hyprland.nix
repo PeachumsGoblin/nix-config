@@ -1,3 +1,6 @@
+# modules/desktop/hyprland.nix
+# Hyprland Wayland window manager settings
+
 { config, pkgs, ... }:
 
 {

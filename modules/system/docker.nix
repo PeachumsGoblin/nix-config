@@ -1,4 +1,7 @@
-{ config, pkgs, ... }:
+# modules/system/docker.nix 
+# Docker & NVIDIA container runtime
+
+{ config, pkgs, lib, ... }:
 
 {
   virtualisation.docker = {
@@ -9,17 +12,11 @@
         "cdi" = true;
       };
       "runtimes" = {
-      "nvidia" = {
-        "path" = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
-        "runtimeArgs" = [];
-      };
+        "nvidia" = {
+          "path" = "${pkgs.nvidia-container-toolkit}/bin/nvidia-container-runtime";
+          "runtimeArgs" = [];
+        };
       };
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    docker
-    nvidia-docker
-    nvidia-container-toolkit
-  ];
 }

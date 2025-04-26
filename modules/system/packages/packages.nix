@@ -1,3 +1,6 @@
+# modules/system/packages/packages.nix
+# Aggregated systemPackages
+
 { config, lib, pkgs, ... }:
 
  let

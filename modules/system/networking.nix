@@ -1,6 +1,7 @@
-{ config, pkgs, lib, ... }:
+# modules/system/networking.nix 
+# SSH, NetworkManager & env vars
 
-# SSH/Networking config
+{ config, pkgs, lib, ... }:
 
 {
   services.openssh.enable = true;
@@ -11,6 +12,5 @@
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
   ];
-
 }
 

@@ -1,4 +1,7 @@
-{ config, pkgs, ... }:
+# modules/system/users.nix 
+# System user definitions & groups
+
+{ config, pkgs, lib, ... }:
 
 {
   users.users.peachie = {

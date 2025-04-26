@@ -1,4 +1,7 @@
-{ config, pkgs, ... }:
+# modules/system/nvidia.nix 
+# NVIDIA driver & X11 configuration
+
+{ config, pkgs, lib, ... }:
 
 let
   nvidiaPkg = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -20,8 +23,4 @@ in {
     Option "TripleBuffer" "true"
     Option "AllowEmptyInitialConfiguration"
   '';
-
-  environment.systemPackages = with pkgs; [
-    nvidiaPkg.settings
-  ];
 }
