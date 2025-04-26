@@ -1,6 +1,7 @@
-{ config, pkgs, theme, ... }:
+# home/peachie/git.nix 
+# Git configuration & aliases
 
-# Git Config
+{ config, lib, pkgs, ... }:
 
 {
   programs.git = {

@@ -1,6 +1,7 @@
-{ config, lib, pkgs, ... }:
+# home/peachie/home.nix 
+# Home Manager core imports & global settings
 
-# Home Manager Core Configuration
+{ config, lib, pkgs, ... }:
 
 {
   imports = [

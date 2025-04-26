@@ -1,6 +1,7 @@
-{ config, pkgs, lib, theme, ... }:
+# home/peachie/terminal.nix 
+# Terminal emulator configuration
 
-# Terminal Emulators
+{ config, lib, pkgs, ... }:
 
 {
   programs.kitty = {

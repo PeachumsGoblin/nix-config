@@ -1,6 +1,7 @@
-{ config, pkgs, theme, ... }:
+# home/peachie/shell.nix 
+# Shell (zsh) settings & prompt theming
 
-# Shell Config
+{ config, lib, pkgs, ... }:
 
 {
   programs.zsh = {

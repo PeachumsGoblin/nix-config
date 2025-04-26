@@ -1,4 +1,7 @@
-{ config, lib, pkgs, stylix, ... }:
+# home/peachie/hyprland.nix 
+# Hyprland session settings via Home Manager
+
+{ config, lib, pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
