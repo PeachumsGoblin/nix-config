@@ -22,7 +22,6 @@ with pkgs; [
     nnn
     nvidia-container-toolkit
     nvidia-docker
-    nvidiaPkg.settings
     pulseaudio
     python3Full
     tree
