@@ -1,1 +1,0 @@
-./stylix-moon.nix

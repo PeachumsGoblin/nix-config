@@ -1,20 +1,15 @@
 # home/peachie/home.nix 
 # Home Manager core imports & global settings
 
-{ config, lib, pkgs, stylix, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
-    stylix.homeManagerModules.stylix
     ./git.nix
     ./shell.nix
     ./terminal.nix
     ./hyprland.nix
-    ./stylix.nix
   ];
-
-  stylix.enable     = true;
-  stylix.autoEnable = true;
 
   home.sessionPath = [
   ".local/bin"

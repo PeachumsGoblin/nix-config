@@ -5,11 +5,9 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    stylix.url = "github:danth/stylix";
-    stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
     in {
@@ -21,8 +19,6 @@
         };
         
       modules = [
-        stylix.nixosModules.stylix
-        ./home/peachie/stylix.nix
         ./hosts/koopy-pc/configuration.nix
         home-manager.nixosModules.home-manager
         {
@@ -35,7 +31,7 @@
             allowFileClobbering = true;
           };
 
-          home-manager.users.peachie = import ./../../home/peachie/home.nix;
+          home-manager.users.peachie = import ../../home/peachie/home.nix;
         }
     ];
   };
