@@ -1,5 +1,5 @@
 {
-  description = "Peachie’s NixOS flake for koopy-pc";
+  description = "Peachie's NixOS flake for koopy-pc";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -17,23 +17,21 @@
           inherit inputs;
           self = inputs.self;
         };
-        
-      modules = [
-        ./hosts/koopy-pc/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-            self = inputs.self;
-            allowFileClobbering = true;
-          };
-
-          home-manager.users.peachie = import ./home/peachie/home.nix;
-        }
-    ];
-  };
-};
+        modules = [
+          ./hosts/koopy-pc/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+              self = inputs.self;
+              allowFileClobbering = true;
+            };
+            home-manager.users.peachie = import ./home/peachie/home.nix;
+          }
+        ];
+      };
+    };
 }

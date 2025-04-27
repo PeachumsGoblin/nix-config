@@ -9,8 +9,6 @@ with pkgs; [
     hyprpaper
     libnotify
     pavucontrol
-    rofi-wayland
-    waybar
     wofi
 
     ## General Utilities

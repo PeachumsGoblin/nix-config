@@ -7,42 +7,63 @@
   programs.waybar = {
     enable = true;
 
-    settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        height = 24;
-        exclusive = true;
-        margin = "3px";
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "battery" "network" "tray" ];
-      };
+  settings = {
+    mainBar = {
+      layer = "top";
+      position = "top";
+      exclusive = true;
+      margin = "0px";
+      modules-left = [ "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [
+        "pulseaudio"
+        "battery"
+        "network"
+        "cpu"
+        "memory"
+        "tray"
+      ];
       "hyprland/workspaces" = {
         on-click = "activate";
       };
+
       clock = {
-        format = "{:%I:%M %p}";
-        tooltip-format = "{:%A, %B %d, %Y}";
+        format = "{:%I:%M %p - %a, %d %b %Y}";
+        tooltip = false;
       };
+
       battery = {
         format = "{capacity}% {icon}";
         format-icons = [ "" "" "" "" "" "" "" "" "" "" "" ];
       };
+
       network = {
         format-wifi = " {essid}";
         format-ethernet = "";
         format-disconnected = "🚫";
       };
+
       pulseaudio = {
-        format = "{volume}% ";
+        format = "{volume}% {icon}";
+        format-icons = [""];
         scroll-step = 5;
       };
+
+      cpu = {
+        format = "CPU {usage}% ";
+        tooltip = false;
+      };
+
+      memory = {
+        format = "RAM {used} / {total} GiB";
+        tooltip = false;
+      };
     };
+  };      
 
     style = ''
       * {
-        font-family: "Monaspace Neon", "monospace";
+        font-family: "Monaspace Neon Nerd Font Propo";
         font-size: 13px;
         background: transparent;
         border-radius: 8px;
@@ -83,6 +104,20 @@
       #battery:hover,
       #network:hover,
       #tray:hover {
+        background-color: #9cd1bb;
+        color: #282a3a;
+      }
+
+      #cpu,
+      #memory {
+        background-color: rgba(83, 87, 99, 0.5); /* matches the others! */
+        padding: 6px 10px;
+        margin: 4px;
+        border-radius: 10px;
+      }
+
+      #cpu:hover,
+      #memory:hover {
         background-color: #9cd1bb;
         color: #282a3a;
       }
