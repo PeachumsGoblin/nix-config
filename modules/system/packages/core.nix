@@ -16,19 +16,20 @@ with pkgs; [
     curl
     docker
     firefox
+    gimp3-with-plugins
+    gscreenshot
+    imagemagick
     jq
     nnn
     nvidia-container-toolkit
     nvidia-docker
     pulseaudio
     python3Full
+    shotman
+    slurp
     tree
     unzip
     wget
-    shotman
-    slurp
-    imagemagick
-    gscreenshot
 
     ## Development Tools / Editors
     git
@@ -38,6 +39,7 @@ with pkgs; [
     sublime4
     vim
     vscode
+    zsh-fast-syntax-highlighting
   ]
 
 

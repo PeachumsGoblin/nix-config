@@ -3,10 +3,17 @@
 
 { config, lib, pkgs, ... }:
 
+{
+  xdg.configFile."hypr/hyprpaper.conf".text = ''
+    preload = ~/nix-config/assets/wallpapers/leafy-moon.png
+    preload = ~/nix-config/assets/wallpapers/vertical-nixos-clean.png
 
-let
-  colors = import ../../modules/themes/colors.nix { inherit lib; };
-in {
+    wallpaper = DP-3,~/nix-config/assets/wallpapers/leafy-moon.png
+    wallpaper = DP-2,~/nix-config/assets/wallpapers/vertical-nixos-clean.png
+
+    ipc = off
+  '';
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -30,9 +37,9 @@ in {
     # AUTO-START
 
       exec-once = [
-        "hyprpaper"
         "dunst"
         "waybar"
+        "hyprpaper"
       ];
 
     # INPUT
@@ -109,8 +116,8 @@ in {
       };
 
       misc = {
-          force_default_wallpaper = 2;
-          disable_hyprland_logo = lib.mkForce false;
+          force_default_wallpaper = 0;
+          disable_hyprland_logo = lib.mkForce true;
       };
 
     # BINDS

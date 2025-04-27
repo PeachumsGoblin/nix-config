@@ -1,0 +1,12 @@
+TO DO
+
+[X] Waybar
+[X] Hyprland
+[X] kitty
+[X] Starship
+[X] zsh fast-syntax-highlighting
+[ ] wofi
+[ ] Cursors
+[ ] GTK Theming 
+[X] Wallpaper
+[ ] sddm

@@ -5,6 +5,7 @@
 
 with pkgs; [
     gvfs
+    hyprpaper
     nemo-fileroller
     papirus-icon-theme
     rose-pine-cursor

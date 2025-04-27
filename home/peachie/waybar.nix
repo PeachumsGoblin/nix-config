@@ -64,7 +64,7 @@
     style = ''
       * {
         font-family: "FiraCode Nerd Font Propo";
-        font-size: 13px;
+        font-size: 14px;
         background: transparent;
         border-radius: 8px;
         color: #f5f9f8;
