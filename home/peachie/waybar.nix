@@ -45,7 +45,7 @@
 
       pulseaudio = {
         format = "{volume}% {icon}";
-        format-icons = [""];
+        format-icons = [" "];
         scroll-step = 5;
       };
 
