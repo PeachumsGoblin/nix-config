@@ -9,6 +9,7 @@
     ./shell.nix
     ./terminal.nix
     ./hyprland.nix
+    ./waybar.nix
   ];
 
   home.sessionPath = [

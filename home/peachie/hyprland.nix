@@ -50,10 +50,11 @@ in {
       general = {
         gaps_in = 5;
         gaps_out = 20;
-        "col.inactive_border" = "rgb(535763)";
         "col.active_border" = "rgb(c39ac9)";
-        border_size = 3;
+        "col.inactive_border" = "rgb(535763)";
+        border_size = 4;
         resize_on_border = false;
+        no_border_on_floating = false;
         layout = "dwindle";
       };
 
@@ -74,6 +75,27 @@ in {
 
       animations = {
         enabled = true;
+
+        bezier = [
+          # Smooth easing for window borders
+          "borderfade, 0.42, 0.0, 0.33, 1.0"   # ease-in-out curve
+          "fadein, 0.36, 0.0, 0.33, 1.0"       # for pop-in effects
+          "fadeout, 0.34, 0.0, 0.33, 1.0"      # for pop-out effects
+        ];
+
+        animation = [
+          # Border glow when window gains focus
+          "border, 1, 4, borderfade"
+
+          # Smooth fade in when spawning windows
+          "windows, 1, 4, fadein"
+
+          # Smooth fade out when closing windows
+          "windowsOut, 1, 4, fadeout"
+
+          # Light pop-in for workspace changes
+          "workspaces, 1, 3, borderfade"
+        ];
       };
 
       dwindle = {
