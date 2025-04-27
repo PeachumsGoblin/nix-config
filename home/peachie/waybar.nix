@@ -63,7 +63,7 @@
 
     style = ''
       * {
-        font-family: "Monaspace Neon Nerd Font Propo";
+        font-family: "FiraCode Nerd Font Propo";
         font-size: 13px;
         background: transparent;
         border-radius: 8px;
