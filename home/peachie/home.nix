@@ -27,17 +27,5 @@
     rm -f ~/.gtkrc-2.0
   '';
 
-  fonts.fontconfig.enable = true;
-
-  home.packages = with pkgs; [
-    font-awesome
-    liberation_ttf
-    monaspace
-    mplus-outline-fonts.githubRelease
-    noto-fonts
-    noto-fonts-emoji
-    proggyfonts
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
 }
 

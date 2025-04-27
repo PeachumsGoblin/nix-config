@@ -5,11 +5,14 @@
 
 {
   fonts.packages = with pkgs; [
+    font-awesome
+    liberation_ttf
+    monaspace
+    mplus-outline-fonts.githubRelease
     noto-fonts
     noto-fonts-emoji
-    font-awesome
-    monaspace
-  ];
+    proggyfonts
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   fonts.enableDefaultPackages = true;
 }
