@@ -36,5 +36,5 @@ let
     origMagenta = "#fd5ff0";
   };
 in
-# Flattened output so you can import { bg0, fg0, red, … } directly
-lib.flattenTree (map (k: [ k ]) (builtins.attrNames c)) c
+# Simply return the attrset; import gives you `c` directly
+c

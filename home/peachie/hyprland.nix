@@ -3,7 +3,10 @@
 
 { config, lib, pkgs, ... }:
 
-{
+
+let
+  colors = import ../../modules/themes/colors.nix { inherit lib; };
+in {
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -47,6 +50,8 @@
       general = {
         gaps_in = 5;
         gaps_out = 20;
+        "col.inactive_border" = "rgb(535763)";
+        "col.active_border" = "rgb(c39ac9)";
         border_size = 3;
         resize_on_border = false;
         layout = "dwindle";
