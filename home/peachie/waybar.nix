@@ -8,14 +8,16 @@
     enable = true;
 
     settings = {
-      layer = "top";
-      position = "top";
-      height = 28;
-      margin = 6;
-      modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "pulseaudio" "battery" "network" "tray" ];
-
+      mainBar = {
+        layer = "top";
+        position = "top";
+        height = 24;
+        exclusive = true;
+        margin = "3px";
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ "clock" ];
+        modules-right = [ "pulseaudio" "battery" "network" "tray" ];
+      };
       "hyprland/workspaces" = {
         on-click = "activate";
       };
@@ -40,20 +42,16 @@
 
     style = ''
       * {
-        font-family: "Fira Code", "monospace";
+        font-family: "Monaspace Neon", "monospace";
         font-size: 13px;
-        border: none;
-        border-radius: 8px;
-        padding: 4px 8px;
-        margin: 3px;
         background: transparent;
+        border-radius: 8px;
         color: #f5f9f8;
       }
 
       window#waybar {
         background-color: rgba(40, 42, 58, 0.85);
-        border-radius: 12px;
-        padding: 5px;
+
       }
 
       #workspaces button {

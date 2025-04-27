@@ -27,6 +27,10 @@ with pkgs; [
     tree
     unzip
     wget
+    shotman
+    slurp
+    imagemagick
+    gscreenshot
 
     ## Development Tools / Editors
     git

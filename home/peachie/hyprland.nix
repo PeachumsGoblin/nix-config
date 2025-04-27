@@ -31,6 +31,7 @@ in {
 
       exec-once = [
         "hyprpaper"
+        "dunst"
         "waybar"
       ];
 
@@ -49,7 +50,7 @@ in {
 
       general = {
         gaps_in = 5;
-        gaps_out = 20;
+        gaps_out = 10;
         "col.active_border" = "rgb(c39ac9)";
         "col.inactive_border" = "rgb(535763)";
         border_size = 4;
